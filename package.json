@@ -1,0 +1,22 @@
+{
+  "name": "read-me-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-henry22/ReadMe-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-henry22/ReadMe-generator/issues"
+  },
+  "homepage": "https://github.com/s-henry22/ReadMe-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
