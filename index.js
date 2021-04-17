@@ -1,15 +1,13 @@
-const readMeDataArgs = process.argv.slice(2, process.argv.length);
-console.log(readMeDataArgs);
+const fs = require('fs');
+const generatePage = require('./src/file-template.js');
 
-const printReadMeData = readMeDataArr => {
-    for (let i = 0; i < readMeDataArr.length; i += 1) {
-        console.log(readMeDataArr[i]);
-    }
+const readmeDataArgs = process.argv.slice(2, process.argv.length);
 
-    console.log('================');
+const [project, author] = readmeDataArgs;
+ 
 
-    readMeDataArr.forEach(readMeItem => console.log(readMeItem));
-        
-};
+fs.writeFile('./README.md', generatePage(project, author), err => {
+    if (err) throw new Error(err);
 
-printReadMeData(readMeDataArgs);
+    console.log('ReadMe complete!  Look at README.md to see the output.');
+});
