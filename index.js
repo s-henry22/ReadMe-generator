@@ -56,6 +56,16 @@ const promptUser = () => {
             type: 'input',
             name: 'usage',
             message: 'Provide instructions and examples for use.'
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Please enter contribution guidlines for other developers'
+        },
+        {
+            type: 'input',
+            name: 'Tests',
+            message: 'Provide examples of how to run application testing'
         }
     ]);
 };    
