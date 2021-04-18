@@ -5,17 +5,41 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'project title',
-            message: 'What is the name of the project?'
+            message: 'What is the name of the project? (Required)',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name for the project.')
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'author name',
-            message: 'Who is the author?'
+            message: 'Who is the author? (Required)',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name for the author.')
+                    return false;
+                }
+            }
         },  
         {
             type: 'input',
             name: 'project description',
-            message: 'Provide a description of the project (Required):'
+            message: 'Provide a description of the project (Required):',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter information describing the project.')
+                    return false;
+                }
+            }
         },
         {
             type:'checkbox',
